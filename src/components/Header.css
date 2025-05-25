@@ -1,3 +1,42 @@
-.maks{
-    background-color: aqua;
+.header {
+  background-color: rgb(0, 64, 139);
+  padding: 30px 0;
+}
+.header__block {
+  color: white;
+  padding: 20px 0;
+  background: linear-gradient(to right, #002e65 0%, #0e2541 67%, #002e65 100%);
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header__logo_name {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.header__first_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__languages {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+.header__languages_img {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.header__navbar {
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-around;
+  margin-top: 30px;
 }

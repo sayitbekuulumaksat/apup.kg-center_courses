@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 body{
-  background-color: #E9F5FF;
-  padding-top: 20px;
+  /* background-color: #438ecb; */
+  padding-top: 10px;
+  background-color: rgb(162, 189, 212);
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

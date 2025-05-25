@@ -1,8 +1,13 @@
-#root {
-  max-width: 1300px;
-  margin: 0 auto;
+/* #root { */
+  /* max-width: 1300px;
+  margin: 0 auto; */
   /* padding: 2rem; */
-  text-align: center;
+  /* text-align: center;
   border-radius: 20px;
-  background-color: white;
+  background-color: rgb(220, 59, 59); */
+
+.container{
+  max-width: 1300px;
+margin: 0 auto;
+padding: 5px;
 }
