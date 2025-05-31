@@ -57,7 +57,7 @@ function Header() {
 
           <a href="#" className="header__navbar_item">Главная</a>
           <a href="#" className="header__navbar_item">О нас</a>
-          <a href="#" className="header__navbar_item">История</a>
+          <a href="#" className="header__navbar_item">Истори</a>
           <a href="#" className="header__navbar_item">Контакты</a>
           <a href="#" className="header__navbar_item">План-график</a>
         </div>
