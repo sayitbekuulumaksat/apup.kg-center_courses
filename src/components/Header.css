@@ -1,11 +1,14 @@
 .header {
   background-color: rgb(0, 64, 139);
-  padding: 30px 0;
+
+  /* padding: 20px 0; */
 }
 .header__block {
-  color: white;
-  padding: 20px 0;
-  background: linear-gradient(to right, #002e65 0%, #0e2541 67%, #002e65 100%);
+  color: black;
+  padding: 5px 0;
+  font-weight: 600;
+  background-color: white;
+  /* background: linear-gradient(to right, #002e65 0%, #0e2541 67%, #002e65 100%); */
 }
 .header__logo {
   display: flex;
@@ -13,7 +16,7 @@
   gap: 30px;
 }
 .header__logo_name {
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 .header__first_block {
@@ -27,7 +30,7 @@
   margin-right: 20px;
 }
 .header__languages_img {
-  border-radius: 100%;
+  border-radius: 50%;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -38,5 +41,51 @@
   align-items: center;
   color: white;
   justify-content: space-around;
-  margin-top: 30px;
+  padding: 10px 0;
+  position: relative;
+}
+.navbar__hover{
+  display: block;
+}
+.active,
+.navbar__hover:hover {
+  border-bottom: 1px solid rgb(254, 254, 254);
+  transform: scale(1.1);
+  transition: all 0.1s ease;
+  /* color: black; */
+}
+
+.dropdown {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0; /* left жана right кошулса туура болот */
+  background-color: rgba(255, 255, 255);
+  list-style: none;
+  /* text-align: center; */
+  padding: 10px;
+  width: 100%; /* <-- экрандан чыкпасын */
+  box-sizing: border-box; /* padding эсептелсин */
+  z-index: 10;
+  color: black; /* же space-between */
+  transition: all 0.1s ease;
+}
+
+.dropdown-item {
+  padding: 5px 0px;
+  width: 100%;
+}
+.dropdown-link {
+  display: block;
+  width: 100%;
+}
+.dropdown-link:hover {
+  text-decoration: underline;
+}
+.sub-active {
+  color: black;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(0, 0, 0);
+
+  /* background: rgba(255, 255, 255, 0.9) */
 }

@@ -1,25 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import navData from "../data/navbar.json";
+import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
+
+
 import "./Header.css";
 
 function Header() {
-  // const [openMenu, setOpenMenu] = useState(null);
-
-  // const navItems = [
-  //   {
-  //     label: "Продукциялар",
-  //     submenu: ["Спорттук кийимдер", "Классикалык кийимдер", "Аксессуарлар"],
-  //   },
-  //   {
-  //     label: "Биз жөнүндө",
-  //     submenu: ["Тарыхыбыз", "Команда", "Максаттар"],
-  //   },
-  //   {
-  //     label: "Байланыш",
-  //     submenu: ["Instagram", "WhatsApp", "Телефон"],
-  //   },
-  // ];
+  const [openIndex, setOpenIndex] = useState(null);
   return (
     <section className='header'>
       <div className='header__block'>
@@ -29,7 +18,7 @@ function Header() {
               src='/logo-agupkr-ru.png'
               alt=''
               className='header__logo_img'
-              width={100}
+              width={80}
             />
             <h1 className='header__logo_name'>
               Центр переподготовки и повышения квалификации
@@ -54,12 +43,50 @@ function Header() {
 
       <div className='container'>
         <div className='header__navbar'>
+          {navData.map((e, index) => (
+            <div
+              key={index}
+              className='navbar__item'
+              onMouseEnter={() => setOpenIndex(index)}
+              onMouseLeave={() => setOpenIndex(null)}
+            >
+              <NavLink
+                to={e.link}
+                className={({ isActive }) =>
+                  isActive ? "active" : "navbar__hover"
+                }
+              ><span style={{ display: "inline-block" }}>
+              {e.name}
+              {e.submenu && (
+                <FaChevronDown
+                  style={{
+                    display: "inline-block",
+                    verticalAlign: "middle",
+                    marginLeft: "10px"
+                  }}
+                />
+              )}
+            </span>
+              </NavLink>
 
-          <a href="#" className="header__navbar_item">Главная</a>
-          <a href="#" className="header__navbar_item">О нас</a>
-          <a href="#" className="header__navbar_item">История</a>
-          <a href="#" className="header__navbar_item">Контакты</a>
-          <a href="#" className="header__navbar_item">План-график</a>
+              {e.submenu && openIndex === index && (
+                <ul className='dropdown'>
+                  {e.submenu.map((subItem, subIndex) => (
+                    <li key={subIndex} className='dropdown-item'>
+                      <NavLink
+                        to={subItem.link}
+                        className={({ isActive }) =>
+                          isActive ? "sub-active" : "dropdown-link"
+                        }
+                      >
+                        {subItem.name}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -2,8 +2,8 @@
 
 body{
   /* background-color: #438ecb; */
-  padding-top: 10px;
-  background-color: rgb(162, 189, 212);
+  /* padding-top: 10px; */
+  background: linear-gradient(0deg, rgb(244, 244, 244) 0%, rgba(244, 244, 244, 0.7) 100%);
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

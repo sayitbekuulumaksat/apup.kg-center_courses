@@ -1,7 +1,14 @@
-.about {
-  max-width: 900px;
+.about__title {
+  font-size: 35px;
+  font-weight: 700;
+  /* max-width: 900px; */
+  /* margin: 20px auto; */
+  padding: 10px 20px;
+}
+.about__block{
+  width: 90%;
   margin: 20px auto;
   border-radius: 20px;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 0 20px;
 }
